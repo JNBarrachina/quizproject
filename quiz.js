@@ -9,6 +9,7 @@ reloadQuiz.addEventListener("click", () => quizReload());
 const nextQ = document.getElementById("buttonNext");
 nextQ.addEventListener("click", () => nextQuestion());
 const showResults = document.getElementById("buttonResults");
+showResults.addEventListener("click", () => checkResults(quiz, finalAnswers));
 
 
 let quiz;
@@ -108,7 +109,7 @@ function nextQuestion(){
     showQuestion(quiz);
 }
 
-function checkResults(quiz, finalAnswers){
+async function checkResults(quiz, finalAnswers){
     let green = 0;
     let red = 0;
 
@@ -121,11 +122,16 @@ function checkResults(quiz, finalAnswers){
         }
     });
 
-    showQ.style.display = "none";
-    buildChart(green, red);
-}
+    await buildChart(green, red);
 
-showResults.addEventListener("click", () => checkResults(quiz, finalAnswers));
+    showResults.innerText = "Mostrar resultados";
+    showQ.style.display = "none";
+    initQuiz.style.display = "inline";
+    quizButton.style.display = "none";
+    reloadQuiz.style.display = "inline";
+    showR.style.display = "inline";
+    
+}
 
 function buildChart(hits, misses){
     showR.innerHTML = " <canvas id='miGrafico'></canvas>";
@@ -158,11 +164,6 @@ function buildChart(hits, misses){
             }
         }
     });
-
-    initQuiz.style.display = "inline";
-    quizButton.style.display = "none";
-    reloadQuiz.style.display = "inline";
-    showR.style.display = "inline";
 }
 
 function quizReload(){
