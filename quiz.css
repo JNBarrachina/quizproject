@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: wheat;
+
+    gap: 1rem;
+}
+
+h1{
+    color: black;
+}
+
+.sectionQuiz{
+    min-height: 20%;
+    max-width: 70%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 1rem;
+
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px 2px grey;
+}
+
+.singleQuestion{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.6rem;
+    text-align: center;
+
+}
+
+.nextQ{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectAnswers{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleAnswer{
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 0.6rem;
+}
+
+.sectionButtons{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+button{
+    padding: 0.4rem;
+    font-weight: bolder;
+
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: rebeccapurple;
+    transition: 0.2s;
+}
+
+
+.btnQuiz{
+    display: none;
+}
+
+.btnResults{
+    background-color: brown;
+    color: white;
+}
+
+.boxResult{
+    display: none;
+}
+
+#miGrafico {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resetQuiz{
+    display: none;
+}

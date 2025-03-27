@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZINATOR</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Quizinator</h1>
+        <section class="sectionQuiz">
+            <section class="selectQuiz" id="selectQuiz">
+                <button class="initQuiz" id="buttonQuiz">Inicia el Quiz</button>
+                <button class="resetQuiz" id="resetQuiz">Prueba otro quiz</button>
+            </section>
+            <article class="boxQuiz">
+                <section class="box1 boxQuestions" id="boxQuestions">
+                </section>
+                <section class="box2 boxResult" id="boxResult">
+                </section>
+                <section class="sectionButtons" id="sectionBtns">
+                    <button class="btnQuiz btnNext" id="buttonNext">Siguiente pregunta</button>
+                    <button class="btnQuiz btnResults" id="buttonResults">Mostrar resultados</button>
+                </section>
+            </article>
+        </section>
+    </main>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
